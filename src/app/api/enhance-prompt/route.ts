@@ -11,39 +11,24 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'openrouter/horizon-beta',
+        model: 'openai/gpt-oss-20b:free',
         messages: [
           {
             role: 'system',
-            content: `You are a full-stack AI project generator. When provided with app requirements, you enhance and expand the instructions into a clear, detailed, and professional prompt for generating a full-stack project.`
+            content: `You are a professional full-stack AI project prompt generator. 
+When given a short or vague project idea, you expand it into a comprehensive, technically detailed, and professional prompt. 
+The prompt should describe the project in a single, well-written paragraph including:
+- Main functionality and purpose
+- Key features (e.g., CRUD, authentication, filtering)
+- Suggested tech stack (frontend, backend, database)
+- UI/UX expectations (responsive design, modern styling)
+- Optional enhancements (like deployment, testing, search)
+
+Do not use bullet points in the output. Your response must be clear, concise, and suitable for guiding a developer or another AI model to begin building the full application.`
           },
           {
             role: 'user',
-            content: `
-${instructions}
-
-Enhance the above instructions to include:
-- Clear project goals
-- High-level technical stack (like framework, language, UI library, etc.)
-- UI layout expectations (e.g., panels, editors, sidebars)
-- Interaction flow if relevant
-- Emphasis on best practices and maintainable folder structure
-
-Then, return the full project structure and key code files as a JavaScript object using this format:
-
-{
-  name: string,
-  type: "folder" | "file",
-  content?: string,
-  children?: array
-}
-
-Constraints:
-- Nest everything under a top-level folder
-- No markdown formatting or extra text
-- Only return the JavaScript object
-- Use template literals (\`) for content field values
-`
+            content: instructions // e.g., "Create todo app"
           }
         ]
       })
