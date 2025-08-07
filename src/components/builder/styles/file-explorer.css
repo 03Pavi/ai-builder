@@ -1,0 +1,52 @@
+.editor-container {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.sidebar {
+  width: 250px;
+  padding: 10px;
+  background-color: #252526;
+  border-right: 1px solid #333;
+  overflow-y: auto;
+}
+
+.editor {
+  flex: 1;
+  height: 100%;
+}
+
+.placeholder {
+  padding: 20px;
+  font-size: 1rem;
+  color: #ccc;
+  font-family: monospace;
+}
+
+/* Tree nodes */
+.node {
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  color: #d4d4d4;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.node:hover {
+  background-color: #2a2d2e;
+}
+
+.folder {
+  font-weight: 600;
+  color: #9cdcfe;
+}
+
+.file {
+  color: #d4d4d4;
+}
