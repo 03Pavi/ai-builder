@@ -99,10 +99,10 @@ export default function GenerateProjectForm() {
 				</CardContent>
 			</Card>
 
-			<div style={{ display: "flex", height: "100vh",flexWrap: "wrap"}}>
+			<div style={{ display: "flex", height: "100vh",}}>
 				<div
 					style={{
-						width: "400px",
+						width: "20%",
 						borderRight: "1px solid #ccc",
 						overflowY: "auto",
 						padding: "1rem",
@@ -112,7 +112,7 @@ export default function GenerateProjectForm() {
 					<FileNode node={response} onSelectFile={handleFileSelect} isLoading={loading}/>
 				</div>
 
-				<div style={{ flex:  1}}>
+				<div style={{ width: "80%", overflowY: "auto", padding: "1rem"}}>
 					<CodeEditor
             isLoading={loading}
 						value={selectedFileContent}
