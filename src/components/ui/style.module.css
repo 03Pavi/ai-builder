@@ -1,0 +1,17 @@
+.appBar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.091) !important;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	flex-wrap: wrap;
+	padding: 8px 16px;
+  position: fixed !important;
+}
+
+.toolBar{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

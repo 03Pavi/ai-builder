@@ -2,21 +2,15 @@
 
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
-import { Button } from "@/components/ui/button"; // optional: if you're using a UI lib
-import { IoMdDownload } from "react-icons/io";
 
-type FileNode = {
+export type FileNode = {
 	name: string;
 	type: "file" | "folder";
 	content?: string;
 	children?: FileNode[];
 };
 
-interface Props {
-	fileTree: FileNode | null;
-}
-
-export default function DownloadAsZip({ fileTree }: Props) {
+export const useDownloadAsZip = (fileTree: FileNode | null) => {
 	const handleDownload = () => {
 		if (!fileTree) return;
 
@@ -34,12 +28,8 @@ export default function DownloadAsZip({ fileTree }: Props) {
 		});
 	};
 
-	return (
-		<Button onClick={handleDownload} disabled={!fileTree}>
-			<IoMdDownload />
-		</Button>
-	);
-}
+	return handleDownload; 
+};
 
 function addToZip(node: FileNode, zip: JSZip, path = "") {
 	const currentPath = path ? `${path}/${node.name}` : node.name;

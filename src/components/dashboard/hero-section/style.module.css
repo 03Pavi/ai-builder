@@ -1,0 +1,209 @@
+.heroSection {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 0 16px;
+}
+
+/* Large Heading */
+.heroSectionHeading {
+	font-size: 75px;
+	margin-bottom: 40px;
+	color: var(--whiteColor);
+}
+
+/* Sub Heading */
+.heroSectionSubHeading {
+	background: var(--gridColor);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+	display: inline-block;
+}
+
+/* Input field */
+.formInput {
+	background-color: transparent !important;
+	box-shadow: unset !important;
+	transition: var(--transition);
+	border: none !important;
+	border-radius: 3px;
+	height: 60px;
+	color: var(--whiteColor) !important;
+	font-size: 18px;
+	width: 100%;
+	min-width: 0;
+}
+.formInput::placeholder {
+	color: var(--whiteColor) !important;
+}
+
+/* Form container */
+.formControl {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	flex-wrap: wrap;
+	padding: 8px 16px;
+}
+
+/* Buttons */
+.formButton {
+	flex: 1;
+	display: flex;
+	gap: 8px;
+	flex-direction: row-reverse;
+}
+
+.generateButton {
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 17px;
+	font-weight: 500;
+	flex: 1;
+	background: var(--gridColor) !important;
+	color: var(--whiteColor) !important;
+	max-width: 160px;
+	text-transform: capitalize !important;
+	margin-right: 0.5rem;
+	min-width: 120px;
+	height: 50px;
+}
+.enhanceButton {
+	height: 42px;
+	width: 42px;
+	color: var(--whiteColor) !important;
+}
+
+.quickTry {
+	color: var(--whiteColor) !important;
+	font-size: 14px !important;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.quickTryText {
+	color: var(--whiteColor) !important;
+	font-size: 14px !important;
+	cursor: pointer !important;
+	background: rgba(255, 255, 255, 0.15) !important;
+	backdrop-filter: blur(10px);
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.quickTryList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-left: 10px;
+}
+
+.disabledButton {
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 17px;
+	font-weight: 500;
+	flex: 1;
+	background: var(--paragraphColor) !important;
+	color: var(--LightBg) !important;
+	max-width: 160px;
+	text-transform: capitalize !important;
+	margin-right: 0.5rem;
+	min-width: 120px;
+	height: 50px;
+}
+.suggestionText {
+	color: var(--whiteColor) !important;
+	font-size: 14px !important;
+	cursor: pointer !important;
+  padding: 0.2rem;
+  text-align: left;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: var(--secounderyColor) !important;
+}
+
+/* Responsive Breakpoints*/
+
+@media (max-width: 1024px) {
+	.heroSectionHeading {
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.heroSection {
+		margin-top: 72px;
+	}
+	.enhanceButton {
+		width: max-content !important;
+	}
+	.heroSectionHeading {
+		font-size: 28px !important;
+	}
+	.heroSectionSubHeading {
+		font-size: 28px !important;
+		margin-bottom: 20px;
+	}
+	.formControl {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 8px;
+		border-radius: 4px;
+	}
+	.formInput {
+		width: 100%;
+		font-size: 16px;
+		height: 50px;
+	}
+	.formButton {
+		width: 100%;
+		justify-content: center;
+		margin: 0 !important;
+	}
+	.generateButton {
+		max-width: none;
+		width: 70%;
+		height: 50px;
+	}
+	.disabledButton {
+		max-width: none;
+		width: 70%;
+		height: 50px;
+	}
+}
+
+@media (max-width: 480px) {
+	.heroSectionHeading {
+		font-size: 28px;
+	}
+	.heroSectionSubHeading {
+		font-size: 22px;
+	}
+	.formInput {
+		font-size: 14px;
+		height: 45px;
+	}
+	.generateButton {
+		padding: 10px;
+		font-size: 15px;
+	}
+	.disabledButton {
+		padding: 10px;
+		font-size: 15px;
+	}
+	.quickTryList {
+		margin-left: 0;
+	}
+}
