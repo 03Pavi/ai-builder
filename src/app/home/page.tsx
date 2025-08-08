@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import FileNode from "@/components/builder/file-node";
 import CodeEditor from "@/components/builder/code-editor";
-import useDownloadAsZip from "@/components/dashboard/prompt-input/download-zip";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 interface FileNode {
@@ -153,7 +152,7 @@ export default function GenerateProjectForm() {
 								"Generate Project"
 							)}
 						</Button>
-						{response && <useDownloadAsZip fileTree={response} />}
+						{/* {response && <useDownloadAsZip fileTree={response} />} */}
 					</Box>
 				</CardContent>
 			</Paper>

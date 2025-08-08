@@ -16,7 +16,7 @@ import { useDownloadAsZip } from "../prompt-input/download-zip";
 import { useLongPress } from "use-long-press";
 import styles from "./style.module.css";
 
-const HeroSection = ({ children }: { children: React.ReactNode }) => {
+const HeroSection = () => {
 	const [message, setMessage] = useState("");
 	const [loading, setLoading] = useState({
 		enhancing: false,
